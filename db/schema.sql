@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS cars4any1_db;
+CREATE DATABASE cars4any1_db;
