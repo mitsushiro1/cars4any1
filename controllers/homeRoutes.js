@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { User, City, Vehicle, Posting, Comment} = require('./../models/index');
 
 router.get('/', async (req, res) => {
   try {
