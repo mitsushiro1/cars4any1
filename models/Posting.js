@@ -22,10 +22,10 @@ Posting.init(
         key: 'id'
       }
     },
-    vendor_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'vendor',
+        model: 'user',
         key: 'id'
       }
     },
