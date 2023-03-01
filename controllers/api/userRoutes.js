@@ -2,6 +2,14 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User, City, Vehicle, Posting, Comment} = require('./../../models/index');
 
+router.get('/', (req, res) => {
+  try {
+
+  } catch(e) {
+    
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const newUser = Object.assign({}, req.body);
