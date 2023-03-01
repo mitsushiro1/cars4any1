@@ -11,6 +11,7 @@ Vehicle.init(
       primaryKey: true,
       autoIncrement: true
     },
+    
     make: {
       type: DataTypes.STRING,
       allowNull: false
@@ -44,6 +45,11 @@ Vehicle.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 5
+    },
+    is_automatic: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+
     }
   },
   {
