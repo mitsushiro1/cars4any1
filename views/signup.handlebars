@@ -1,0 +1,29 @@
+
+<div class="signup-form-wrapper">
+  <h2>Please sign up</h2>
+  <form>
+    <label for="first-name-input">First Name</label><br>
+    <input type="text" id="first-name-input" required><br>
+    <label for="last-name-input">Last Name</label><br>
+    <input type="text" id="last-name-input" required><br>
+    <label for="email-input">Email</label><br>
+    <input type="text" id="email-input" required><br>
+    <label for="password-input">Password</label><br>
+    <input type="password" id="password-input" minlength="8" required><br>
+    <label for="password-confirm">Re-enter password</label><br>
+    <input type="password" id="password-confirm" minlength="8" required><br>
+    <label>Are you a vendor?</label><br>
+    <label for="">Yes<input type="radio" name="vendor" id="isVendor"></label>
+    <label for="">No<input type="radio" name="vendor" id="notVendor" checked></label><br>
+    <label for="location">Please select your location</label><br>
+    <select id="location">
+      <option value="1">Scarborough</option>
+      <option value="2">North York</option>
+      <option value="3">Markham</option>
+    </select><br>
+    <button id="signup-button" type="submit">Sign up</button>
+    <button id="go-back-btn">Go back</button>
+  </form>
+  <script src="/js/signup-form.js"></script>
+</div>
+    
