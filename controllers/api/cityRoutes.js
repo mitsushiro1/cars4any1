@@ -1,13 +1,43 @@
 const router = require('express').Router();
 
-router.get('/', );
+router.get('/', async(req, res) => {
+  try {
 
-router.get('/:id', );
+  }catch(e) {
+    
+  }
+});
 
-router.put('/:id', );
+router.get('/:id', async(req, res) => {
+  try {
 
-router.post('/', );
+  }catch(e) {
+    
+  }
+});
 
-router.delete('/:id', );
+router.put('/:id', async(req, res) => {
+  try {
+
+  }catch(e) {
+    
+  }
+});
+
+router.post('/', async(req, res) => {
+  try {
+
+  }catch(e) {
+    
+  }
+});
+
+router.delete('/:id', async(req, res) => {
+  try {
+
+  }catch(e) {
+    
+  }
+});
 
 module.exports = router;
