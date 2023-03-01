@@ -39,6 +39,8 @@ router.post('/login', async (req, res) => {
     const user = await userData.get({plain: true});
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.username = user.first_name;
+      req.session.userid = user.id;
       req.session.is_vendor = user.is_vendor;
       res
         .status(200)
