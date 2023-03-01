@@ -2,11 +2,48 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User, City, Vehicle, Posting, Comment} = require('./../../models/index');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-
-  } catch(e) {
+    if (req.query.key === process.env.APIKEY) {
+      const response = await User.findAll();
+      res.status(200).json(response);
+    } else {
+      res.status(400).json({
+        message: 'You need api key to get users data'
+      })
+    }
     
+  } catch(e) {
+    res.status(500).json(e);
+  }
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+    const response = await User.update(req.body, {where: {id: req.params.id}});
+    res.status(200).json(response);
+  } catch(e) {
+    res.status(500).json(e);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    if (req.query.key === process.env.APIKEY) {
+      const response = await User.destroy({where: {
+        id: req.params.id
+      }});
+      res.status(200).json({
+        status: 'success',
+        response
+      });
+    } else {
+      res.status(400).json({
+        message: 'You need an api key to delete users!'
+      })
+    }
+  } catch(e) {
+    res.status(500).json(e);
   }
 });
 
