@@ -1,3 +1,11 @@
+const gobackButton = document.getElementById('goback');
+
+gobackButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  document.location.replace('/');
+});
+
 async function formHandler() {
   console.log('Working');
   const email = document.querySelector('#email-input').value.trim();

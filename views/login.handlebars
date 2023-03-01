@@ -1,15 +1,21 @@
-
-<div class="login-form-wrapper">
-  <h4>Please login</h4>
-  <form>
+<div class="signup-form-wrapper">
+  <div class="login-form-container">
+    <h1>Please login</h1>
     <form>
-        <label for="email-input">Email</label><br>
-        <input type="text" id="email-input" required><br>
-        <label for="password-input">Password</label><br>
-        <input type="password" id="password-input" minlength="8" required><br>
-        <button id="signin-button" type="submit">Submit</button>
-        <p>Don't have an account? <a href="/signup">Sign up</a></p>
-      </form>
-  </form>
+      <div class="form-control">
+        <input id="email-input" type="text" required>
+        <label for="email-input">Email</label>
+      </div>
+      <div class="form-control">
+        <input id="password-input" type="password" required>
+        <label for="password-input">Password</label>
+      </div>
+      <button id="signin-button">Login</button>
+      <button id="goback">Go back</button>
+
+      <p class="text">Don't have an account? <a href="/signup">Sign up</a></p>
+    </form>
+  </div>
+  <script src="/js/wave-animation.js"></script>
   <script src="/js/login-form.js"></script>
 </div>
