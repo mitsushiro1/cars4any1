@@ -41,4 +41,106 @@
 
 .signup-form-wrapper {
   padding: 20px;
+  margin: 10px 40px;
+}
+
+.login-form-container {
+  background-color: rgba(18, 20, 22, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.text {
+  margin-top: 25px;
+}
+
+.login-form-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form-container a {
+  text-decoration: none;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1.8px white solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
+
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1.8px white solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
 }
