@@ -1,0 +1,84 @@
+[
+
+	{
+		"first_name": "Jack",
+		"last_name": "Oneman",
+		"email": "email1@gmail.com",
+		"password": "password1",
+		"is_vendor": false,
+		"user_city_id": 2
+	},
+	{
+		"first_name": "Tom",
+		"last_name": "Twonam",
+		"email": "email2@gmail.com",
+		"password": "password2",
+		"is_vendor": false,
+		"user_city_id": 2
+	},
+	{
+		"first_name": "Bob",
+		"last_name": "Threeman",
+		"email": "email3@gmail.com",
+		"password": "password3",
+		"is_vendor": true,
+		"user_city_id": 3
+	},
+	{
+		"first_name": "Ross",
+		"last_name": "Fourman",
+		"email": "email4@gmail.com",
+		"password": "password4",
+		"is_vendor": false,
+		"user_city_id": 4
+	},
+	{
+		"first_name": "Joe",
+		"last_name": "Fiveman",
+		"email": "email5@gmail.com",
+		"password": "password5",
+		"is_vendor": false,
+		"user_city_id": 5
+	},
+	{
+		"first_name": "Ben",
+		"last_name": "Sixman",
+		"email": "email6@gmail.com",
+		"password": "password6",
+		"is_vendor": true,
+		"user_city_id": 6
+	},
+	{
+		"first_name": "Sam",
+		"last_name": "Sevenman",
+		"email": "email7@gmail.com",
+		"password": "password7",
+		"is_vendor": true,
+		"user_city_id": 7
+	},
+	{
+		"first_name": "Dan",
+		"last_name": "Eightman",
+		"email": "email8@gmail.com",
+		"password": "password8",
+		"is_vendor": false,
+		"user_city_id": 8
+	},
+	{
+		"first_name": "Rob",
+		"last_name": "Nineman",
+		"email": "email9@gmail.com",
+		"password": "password9",
+		"is_vendor": false,
+		"user_city_id": 9
+	},
+	{
+		"first_name": "Leo",
+		"last_name": "Tenman",
+		"email": "email10@gmail.com",
+		"password": "password10",
+		"is_vendor": false,
+		"user_city_id": 10
+	}
+
+]
