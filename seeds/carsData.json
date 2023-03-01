@@ -1,0 +1,136 @@
+[
+    {
+        "id": 1,
+        "make": "honda",
+        "model": "accord",
+        "year": 2012,
+        "color": "silver",
+        "is_luxury": false,
+        "body_type": "sedan",
+        "fuel_type": "gasoline",
+        "seating_capacity": 5,
+        "is_automatic": ,
+        
+    },
+    {
+        "id": 2,
+        "make": "kia",
+        "model": "sorento",
+        "year": 2017,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 3,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 4,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 5,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 6,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 7,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 8,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 9,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+    {
+        "id": 10,
+        "make": "",
+        "model": "",
+        "year": ,
+        "color": "",
+        "is_luxury": ,
+        "body_type": "",
+        "fuel_type": "",
+        "seating_capacity": ,
+        "is_automatic": ,
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
