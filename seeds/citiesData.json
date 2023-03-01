@@ -1,6 +1,54 @@
 [
 
 	{
+		"name": "Toronto"
+	},
+	{
+		"name": "Ottawa"
+	},
+	{
+		"name": "Durham"
+	},
+	{
+		"name": "Halton"
+	},
+	{
+		"name": "London"
+	},
+	{
+		"name": "Windsor"
+	},
+	{
+		"name": "Kitchener"
+	},
+	{
+		"name": "Kingston"
+	},
+	{
+		"name": "Thunder Bay"
+	},
+	{
+		"name": "Hamilton"
+	},
+	{
+		"name": "Guelph"
+	},
+	{
+		"name": "Barrie"
+	},
+	{
+		"name": "Sudbury"
+	},
+	{
+		"name": "St. Catharines"
+	},
+	{
+		"name": "Cambridge"
+	},
+	{
+		"name": "Niagara Falls"
+	},
+	{
 		"name": "Ajax"
 	},
 	{
@@ -84,5 +132,5 @@
 	{
 		"name": "New Tecumseth"
 	}
-	
+
 ]
