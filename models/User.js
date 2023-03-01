@@ -34,6 +34,11 @@ User.init(
         len: [8]
       },
     },
+    is_vendor: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
+    },
     user_city_id: {
       type: DataTypes.INTEGER,
       references: {

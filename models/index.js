@@ -1,5 +1,4 @@
 const User = require('./User');
-const Vendor = require('./Vendor');
 const City = require('./City');
 const Vehicle = require('./Vehicle');
 const Posting = require('./Posting');
@@ -10,13 +9,8 @@ User.hasOne(City, {
   onDelete: 'set null'
 });
 
-Vendor.hasOne(City, {
-  foreignKey: 'vendor_city_id',
-  onDelete: 'set null'
-});
-
-Posting.hasOne(Vendor, {
-  foreignKey: 'vendor_id',
+Posting.hasOne(User, {
+  foreignKey: 'user_id',
   onDelete: 'cascade'
 });
 
@@ -44,4 +38,4 @@ Comment.belongsTo(Posting, {
 
 
 
-module.exports = { User, Vendor, City, Vehicle, Posting, Comment};
+module.exports = { User, City, Vehicle, Posting, Comment};
