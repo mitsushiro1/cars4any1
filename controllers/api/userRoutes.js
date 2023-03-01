@@ -18,6 +18,22 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    if (req.query.key === process.env.APIKEY) {
+      const response = await User.findByPk(req.params.id);
+      res.status(200).json(response);
+    } else {
+      res.status(400).json({
+        message: 'You need api key to get users data'
+      })
+    }
+    
+  } catch(e) {
+    res.status(500).json(e);
+  }
+});
+
 router.put('/:id', async (req, res) => {
   try {
     const response = await User.update(req.body, {where: {id: req.params.id}});
@@ -40,7 +56,7 @@ router.delete('/:id', async (req, res) => {
     } else {
       res.status(400).json({
         message: 'You need an api key to delete users!'
-      })
+      });
     }
   } catch(e) {
     res.status(500).json(e);
