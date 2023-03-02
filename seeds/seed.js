@@ -3,7 +3,6 @@ const { User, Vehicle, Posting, Comment} = require('../models');
 
 const usersData = require('./usersData.json');
 const carsData = require('./carsData.json');
-const citiesData = require('./citiesData.json');
 const commentsData = require('./commentsData.json');
 const postingsData = require('./postingsData.json');
 
