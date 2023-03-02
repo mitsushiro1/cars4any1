@@ -17,23 +17,114 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: var(--color-dark--2);
+}
+
 .web-header {
   width: 100%;
   min-height: 90px;
   padding: 10px;
+  padding-left: 25px;
+  padding-right: 20px;
   height: 8%;
+  background-color: var(--color-dark--1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.web-header h1 {
-  font-size: 1.2rem;
+.heading-container {
+  padding: 10px;
+}
+
+.web-header .heading-container h1 {
+  font-size: 1.5rem;
   font-weight: 500;
+  color: var(--color-brand--2);
 }
 
-.web-header h2 {
+.web-header .logo {
+  font-size: 1.8rem;
+  color: var(--color-brand--2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* burger button section in header */
+.buttons-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  min-width: 300px;
+  height: 100%;
+}
+
+.header-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-btns button {
+  flex: 0 0 80px;
+  margin-left: 10px;
+}
+
+.burger-btn {
+  background-color: var(--color-dark--2);
+  margin-left: 15px;
+  color: var(--color-brand--2);
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.header-btns {
+  width: 40%;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-btns button {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 60px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  transform: scale(1);
+}
+
+.header-btns button:active {
+  transform: scale(0.9);
+}
+
+.header-btns button a {
+  color: var(--color-dark--1);
+  text-decoration: none;
+}
+
+/* above is burger button section in header*/
+
+.web-header .heading-container h2 {
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
+  color: var(--color-brand--1);
 }
+
+/* below are styles for login form */
 
 .login-form-wrapper {
   padding: 20px;
@@ -144,3 +235,5 @@
 .form-control input:valid + label span {
   transform: translateY(-30px);
 }
+
+/* above are styles for login form */
