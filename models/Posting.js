@@ -15,6 +15,10 @@ Posting.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     vehicle_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -28,14 +32,7 @@ Posting.init(
         model: 'user',
         key: 'id'
       }
-    },
-    posting_city_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'city',
-        key: 'id'
-      }
-    }
+    }, 
   },
   {
     sequelize,
