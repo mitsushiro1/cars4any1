@@ -18,7 +18,7 @@ signupBtn.addEventListener('click', async (e) => {
   const locationSelect = document.getElementById("location");
 
   const is_vendor = isVendorButton.checked ? true : false;
-  const user_city_id = parseInt(locationSelect.value)
+  const user_city = parseInt(locationSelect.value)
   if (password !== confirmPassword || password.length < 8 || confirmPassword.length < 8) {
     alert('1. You may entered different passwords in password and confirm input. 2.Password must be at least 8 characters long. Please try again!')
     return;
@@ -33,7 +33,7 @@ signupBtn.addEventListener('click', async (e) => {
       email,
       password,
       is_vendor,
-      user_city_id
+      user_city
     }),
     headers: { 'Content-Type': 'application/json' }
   });

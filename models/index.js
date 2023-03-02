@@ -1,5 +1,4 @@
 const User = require('./User');
-const City = require('./City');
 const Vehicle = require('./Vehicle');
 const Posting = require('./Posting');
 const Comment = require('./Comment');
@@ -16,10 +15,6 @@ Posting.belongsTo(User, {
 Posting.hasOne(Vehicle, {
   foreignKey: 'vehicle_id',
   onDelete: 'cascade'
-});
-
-Vehicle.belongsToMany(Posting, {
-  foreignKey: 'vehicle_id'
 });
 
 Posting.hasMany(Comment, {
