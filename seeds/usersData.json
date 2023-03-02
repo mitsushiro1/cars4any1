@@ -6,7 +6,7 @@
 		"email": "email1@gmail.com",
 		"password": "password1",
 		"is_vendor": false,
-		"user_city_id": 2
+		"user_city": "Toronto"
 	},
 	{
 		"first_name": "Tom",
@@ -14,7 +14,7 @@
 		"email": "email2@gmail.com",
 		"password": "password2",
 		"is_vendor": false,
-		"user_city_id": 2
+		"user_city": "York"
 	},
 	{
 		"first_name": "Bob",
@@ -22,7 +22,7 @@
 		"email": "email3@gmail.com",
 		"password": "password3",
 		"is_vendor": true,
-		"user_city_id": 3
+		"user_city": "Halton"
 	},
 	{
 		"first_name": "Ross",
@@ -30,7 +30,7 @@
 		"email": "email4@gmail.com",
 		"password": "password4",
 		"is_vendor": false,
-		"user_city_id": 4
+		"user_city": "Peel"
 	},
 	{
 		"first_name": "Joe",
@@ -38,7 +38,7 @@
 		"email": "email5@gmail.com",
 		"password": "password5",
 		"is_vendor": false,
-		"user_city_id": 5
+		"user_city": "Burlington"
 	},
 	{
 		"first_name": "Ben",
@@ -46,7 +46,7 @@
 		"email": "email6@gmail.com",
 		"password": "password6",
 		"is_vendor": true,
-		"user_city_id": 6
+		"user_city": "Ajax"
 	},
 	{
 		"first_name": "Sam",
@@ -54,7 +54,7 @@
 		"email": "email7@gmail.com",
 		"password": "password7",
 		"is_vendor": true,
-		"user_city_id": 7
+		"user_city": "Brock"
 	},
 	{
 		"first_name": "Dan",
@@ -62,7 +62,7 @@
 		"email": "email8@gmail.com",
 		"password": "password8",
 		"is_vendor": false,
-		"user_city_id": 8
+		"user_city": "Whitby"
 	},
 	{
 		"first_name": "Rob",
@@ -70,7 +70,7 @@
 		"email": "email9@gmail.com",
 		"password": "password9",
 		"is_vendor": false,
-		"user_city_id": 9
+		"user_city": "King"
 	},
 	{
 		"first_name": "Leo",
@@ -78,7 +78,7 @@
 		"email": "email10@gmail.com",
 		"password": "password10",
 		"is_vendor": false,
-		"user_city_id": 10
+		"user_city": "Mono"
 	}
 
 ]
