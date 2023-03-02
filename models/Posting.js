@@ -32,7 +32,14 @@ Posting.init(
         model: 'user',
         key: 'id'
       }
-    }, 
+    },
+    posting_city_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'city',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
