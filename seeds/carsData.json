@@ -8,7 +8,8 @@
         "body_type": "sedan",
         "fuel_type": "gasoline",
         "seating_capacity": 5,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "1.webp"
         
     },
     {
@@ -21,7 +22,8 @@
         "body_type": "SUV",
         "fuel_type": "gasoline",
         "seating_capacity": 5,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "2.jpg"
     },
     {
         "make": "ford",
@@ -32,7 +34,8 @@
         "body_type": "truck",
         "fuel_type": "gasoline",
         "seating_capacity": 5,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "3.jpg"
     },
     {
         "make": "lamborghini",
@@ -43,7 +46,8 @@
         "body_type": "coupe",
         "fuel_type": "gasoline",
         "seating_capacity": 2,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "4.jpg"
     },
     {
         "make": "tesla",
@@ -54,7 +58,8 @@
         "body_type": "SUV",
         "fuel_type": "electric",
         "seating_capacity": 5,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "5.jpg"
     },
     {
         "make": "smart",
@@ -65,7 +70,8 @@
         "body_type": "coupe",
         "fuel_type": "gasoline",
         "seating_capacity": 2,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "6.jpg"
     },
     {
         "make": "toyota",
@@ -76,7 +82,8 @@
         "body_type": "sedan",
         "fuel_type": "gasoline",
         "seating_capacity": 5,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "7.jpg"
     },
     {
         "make": "international",
@@ -87,7 +94,8 @@
         "body_type": "truck",
         "fuel_type": "diesel",
         "seating_capacity": 2,
-        "is_automatic": false
+        "is_automatic": false,
+        "filename": "8.jpg"
     },
     {
         "make": "volkswagen",
@@ -98,7 +106,8 @@
         "body_type": "convertible",
         "fuel_type": "gasoline",
         "seating_capacity": 4,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "9.jpg"
     },
     {
         "make": "audi",
@@ -109,6 +118,7 @@
         "body_type": "convertible",
         "fuel_type": "gasoline",
         "seating_capacity": 2,
-        "is_automatic": true
+        "is_automatic": true,
+        "filename": "10.jpg"
     }
 ]
