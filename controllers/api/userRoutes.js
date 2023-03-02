@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const { User, City, Vehicle, Posting, Comment} = require('./../../models/index');
+const { User, Vehicle, Posting, Comment} = require('./../../models/index');
 
 router.get('/', async (req, res) => {
   try {
@@ -70,6 +70,7 @@ router.post('/', async (req, res) => {
     const response = await User.create(newUser);
     res.status(200).json(response);
   } catch(e) {
+    console.log(e);
     res.status(400).json(e);
   }
 });
