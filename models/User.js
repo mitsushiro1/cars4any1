@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+
 
 class User extends Model {}
 
@@ -39,12 +41,9 @@ User.init(
       defaultValue: false,
       allowNull: false
     },
-    user_city_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'city',
-        key: 'id'
-      }
+    user_city: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

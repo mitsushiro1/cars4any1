@@ -50,6 +50,10 @@ Vehicle.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
 
+    },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   },
   {
