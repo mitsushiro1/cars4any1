@@ -1,0 +1,39 @@
+
+@media only screen and (max-width: 600px) {
+  .web-header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .web-header .heading-container .logo {
+    font-size: 1.6rem;
+  }
+
+  .web-header .heading-container h1 {
+    font-size: 1rem;
+  }
+
+  .web-header .heading-container h2 {
+    font-size: 0.5rem;
+    display: none;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .buttons-wrapper .header-btns {
+    display: flex;
+    justify-self: space-between;
+  }
+
+  .buttons-wrapper .header-btns button {
+    flex: 0 0 50px;
+    font-size: 0.6rem;
+  }
+}

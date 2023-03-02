@@ -5,14 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/media.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Cars4Any1</title>
 </head>
 <body>
   <div class="web-header">
-    <h1>Cars4Any1</h1>
-    <h2>Your best car rental choice in GTA</h2>
+    <div class="heading-container">
+      <h1><span class="logo"><i class="fa-solid fa-car-burst"></i></span> Cars4Any1</h1>
+      <h2>Your best car rental choice in GTA</h2>
+    </div>
+    <div class="buttons-wrapper">
+      <div class="burger">
+      <button id="burger-btn" class="burger-btn" id="burger"><i class="fa-solid fa-bars"></i></button>
+      <div class="hidden-nav-bar hidden">
+        <div class="nav-item"><a href=""><i class="fa-regular fa-user"></i> Profile</a></div>
+        <div class="nav-item"><a href=""><i class="fa-solid fa-list-ul"></i> Discover</a></div>
+        <div class="nav-item"><a href=""><i class="fa-regular fa-credit-card"></i> Subscription</a></div>
+        <div class="nav-item"><a href=""><i class="fa-solid fa-cart-shopping"></i> Orders</a></div>
+      </div>
+      <div class="search">
+        <input type="text" class="input">
+        <button id="search-btn" class="burger-btn" id="burger"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+    <div class="header-btns">
+      <button class="header-login"><a href="/login">Log in</a></button>
+      <button class="header-signup"><a href="/signup">Sign up</a></button>
+    </div>
+    </div>
   </div>
   {{{body}}}
+  <script src="/js/burger.js"></script>
 </body>
 </html>

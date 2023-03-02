@@ -17,37 +17,212 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: var(--color-dark--2);
+}
+
 .web-header {
   width: 100%;
   min-height: 90px;
   padding: 10px;
+  padding-left: 25px;
+  padding-right: 20px;
   height: 8%;
+  background-color: var(--color-dark--1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.web-header h1 {
-  font-size: 1.2rem;
+.heading-container {
+  padding: 10px;
+}
+
+.web-header .heading-container h1 {
+  font-size: 1.5rem;
   font-weight: 500;
+  color: var(--color-brand--2);
 }
 
-.web-header h2 {
+.web-header .logo {
+  font-size: 1.8rem;
+  color: var(--color-brand--2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* burger button section in header */
+.buttons-wrapper {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  min-width: 400px;
+  height: 100%;
+}
+
+.header-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-btns button {
+  flex: 0 0 80px;
+  margin-left: 10px;
+}
+
+.burger {
+  width: 300px;
+}
+
+.burger-btn {
+  background-color: var(--color-dark--2);
+  margin-left: 15px;
+  color: var(--color-brand--2);
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.header-btns {
+  width: 40%;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-btns button {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 60px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  transform: scale(1);
+}
+
+.header-btns button:active {
+  transform: scale(0.9);
+}
+
+.header-btns button a {
+  color: var(--color-dark--1);
+  text-decoration: none;
+}
+
+/* above is burger button section in header*/
+
+.web-header .heading-container h2 {
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
+  color: var(--color-brand--1);
 }
+
+/* below are styles for hidden nav bar*/
+
+.hidden-nav-bar {
+  position: absolute;
+  top: 80%;
+  left: 6%;
+  min-width: 120px;
+  background-color: var(--color-light--1);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.hidden-nav-bar .nav-item a{
+  padding: 3px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--color-dark--1);
+}
+
+/* above are styles for hidden nav bar*/
+
+/* search bar*/
+
+.search {
+  position: relative;
+  height: 50px;
+  display: inline;
+}
+
+.search .input {
+  background-color: var(--color-dark--1);
+  border-radius: 5px;
+  height: 25px;
+  width: 2px;
+  transition: width 0.3s ease;
+  border: none;
+}
+
+.search-btn {
+  background-color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 100px;
+  background-color: var(--color-light--2);
+}
+
+.search.active .btn {
+  transform: translateX(192px);
+}
+
+/* below are styles for login form */
 
 .login-form-wrapper {
   padding: 20px;
+  width: 100%;
+  height: 70%;
 }
 
 .signup-form-wrapper {
   padding: 20px;
   margin: 10px 40px;
+  width: 90%;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-form-container {
   background-color: rgba(18, 20, 22, 0.6);
   padding: 20px;
   border-radius: 10px;
+}
+
+.login-form-container h1 {
+  color: var(--color-brand--2);
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .btn:focus {
@@ -71,6 +246,29 @@
   text-decoration: none;
 }
 
+.login-form-container form button {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 80px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.login-form-container form p {
+  color: var(--color-light--2);
+}
+
+.login-form-container form p a {
+  color: var(--color-brand--1);
+}
+
+.login-form-container form button:active {
+  transform: scale(0.9);
+}
+
 .form-control {
   position: relative;
   margin: 20px 0 40px;
@@ -80,12 +278,11 @@
 .form-control input {
   background: transparent;
   border: 0;
-  border-bottom: 1.8px white solid;
+  border-bottom: 1.8px var(--color-brand--1) solid;
   display: block;
   width: 100%;
   padding: 15px 0;
-  font-size: 14px;
-  color: white;
+  font-size: 10px;
 }
 
 .form-control input:focus,
@@ -97,6 +294,7 @@
   position: absolute;
   top: 15px;
   left: 0;
+  color: var(--color-brand--1);
 }
 
 .form-control label span {
@@ -110,11 +308,13 @@
 .form-control input:valid + label span {
   transform: translateY(-30px);
 }
+
+
 
 .form-control input {
   background: transparent;
   border: 0;
-  border-bottom: 1.8px white solid;
+  border-bottom: 1.8px var(--color-brand--2) solid;
   display: block;
   width: 100%;
   padding: 15px 0;
@@ -144,3 +344,5 @@
 .form-control input:valid + label span {
   transform: translateY(-30px);
 }
+
+/* above are styles for login form */
