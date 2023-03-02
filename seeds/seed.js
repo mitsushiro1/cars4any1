@@ -8,12 +8,13 @@ const commentsData = require('./commentsData.json');
 const postingsData = require('./postingsData.json');
 
 
-function seedAll() {
-  User.bulkCreate(usersData);
-  Vehicle.bulkCreate(carsData);
-  City.bulkCreate(citiesData);
-  Posting.bulkCreate(postingsData);
-  Comment.bulkCreate(commentsData);
+async function seedAll() {
+  
+  await Vehicle.bulkCreate(carsData);
+  await City.bulkCreate(citiesData);
+  await User.bulkCreate(usersData);
+  await Posting.bulkCreate(postingsData);
+  await Comment.bulkCreate(commentsData);
 }
 
 seedAll();

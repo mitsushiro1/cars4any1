@@ -4,24 +4,22 @@ const Vehicle = require('./Vehicle');
 const Posting = require('./Posting');
 const Comment = require('./Comment');
 
-User.hasOne(City, {
-  foreignKey: 'user_city_id',
-  onDelete: 'set null'
-});
-
-Posting.hasOne(User, {
+User.hasMany(Posting, {
   foreignKey: 'user_id',
   onDelete: 'cascade'
-});
+})
 
-Posting.hasOne(City, {
-  foreignKey: 'posting_city_id',
-  onDelete: 'cascade'
+Posting.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
 Posting.hasOne(Vehicle, {
   foreignKey: 'vehicle_id',
   onDelete: 'cascade'
+});
+
+Vehicle.belongsToMany(Posting, {
+  foreignKey: 'vehicle_id'
 });
 
 Posting.hasMany(Comment, {
@@ -34,8 +32,4 @@ Comment.belongsTo(Posting, {
   onDelete: 'cascade'
 });
 
-
-
-
-
-module.exports = { User, City, Vehicle, Posting, Comment};
+module.exports = { User, Vehicle, Posting, Comment};
