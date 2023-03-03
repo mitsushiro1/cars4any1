@@ -2,4 +2,7 @@
 <h5>Now you are logged in</h5>
 {{else}}
 <a href="/login">Login</a>
+{{#each postArray as |post|}}
+<h1>{{post.title}}</h1>
+{{/each}}
 {{/if}}

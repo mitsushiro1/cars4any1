@@ -3,12 +3,33 @@ const { User, Vehicle, Posting, Comment} = require('./../models/index');
 
 router.get('/', async (req, res) => {
   try {
+    const response = await Posting.findAll({ 
+      include: [
+        {model: Vehicle},
+        {
+          model: User,
+          attributes: [
+            "id",
+            "first_name",
+            "last_name",
+            "email"
+          ]
+        }
+      ],
+      attributes: [
+        "id",
+        "title"
+      ]
+    });
+
+    const postArray = response.map(p => p.get({plain: true}));
 
     res.render('homepage', {
       loggedIn: req.session.loggedIn,
       username: req.session.username,
       userid: req.session.userid,
-      is_vendor: req.session.is_vendor
+      is_vendor: req.session.is_vendor,
+      postArray
     });
   } catch(e) {
     res.status(500).json(e);
