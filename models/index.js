@@ -12,9 +12,13 @@ Posting.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Posting.hasOne(Vehicle, {
+Vehicle.hasMany(Posting, {
   foreignKey: 'vehicle_id',
   onDelete: 'cascade'
+});
+
+Posting.belongsTo(Vehicle, {
+  foreignKey: 'vehicle_id'
 });
 
 Posting.hasMany(Comment, {
