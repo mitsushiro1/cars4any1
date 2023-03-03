@@ -6,10 +6,13 @@
     <div>First Name: {{username}}</div>
     <div>Last Name: {{lastname}} </div>
     <div>Email: {{email}}<button id="update-email">Update Email</button></div>
-    <div>Is this a vendor account?: {{is_vendor}}<button id="update-account">Update Account</button></div>
+    <div>Is this a vendor account?: <span id="profile-is-vendor">{{is_vendor}}</span><button id="update-account">Update Account</button></div>
   </div>
   {{else}}
-  <p>Please <a href="/login">login</a></p>
+  <div class="please-log-in">
+    <p>You need to login to check your profile</p>
+    <p>Please <a href="/login">login</a></p>
+  </div>
   {{/if}}
   <div class="change-email hide">
     <p>Please enter your new email address here</p>
