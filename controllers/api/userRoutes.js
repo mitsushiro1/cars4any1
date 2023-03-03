@@ -4,15 +4,8 @@ const { User, Vehicle, Posting, Comment} = require('./../../models/index');
 
 router.get('/', async (req, res) => {
   try {
-    if (req.query.key === process.env.APIKEY) {
-      const response = await User.findAll();
-      res.status(200).json(response);
-    } else {
-      res.status(400).json({
-        message: 'You need api key to get users data'
-      })
-    }
-    
+    const response = await User.findAll();
+    res.status(200).json(response);
   } catch(e) {
     res.status(500).json(e);
   }

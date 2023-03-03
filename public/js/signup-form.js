@@ -18,7 +18,7 @@ signupBtn.addEventListener('click', async (e) => {
   const locationSelect = document.getElementById("location");
 
   const is_vendor = isVendorButton.checked ? true : false;
-  const user_city = parseInt(locationSelect.value)
+  const user_city = locationSelect.value;
   if (password !== confirmPassword || password.length < 8 || confirmPassword.length < 8) {
     alert('1. You may entered different passwords in password and confirm input. 2.Password must be at least 8 characters long. Please try again!')
     return;
@@ -40,9 +40,9 @@ signupBtn.addEventListener('click', async (e) => {
   
   if(data.ok) {
     const formWrapper = document.querySelector('.signup-form-wrapper');
-    formWrapper.innerHTML = '<p>Thank you! You have been successfully signed up. You will be redirected to homepage in three seconds. If the reload does not work, please click here <a href="/" style="color: var(--color-brand--1)">Home</a></p>';
+    formWrapper.innerHTML = '<p style="color: var(--color-brand--1)">Thank you! You have been successfully signed up. You will be redirected to homepage in three seconds. If the reload does not work, please click here <a href="/" style="color: var(--color-brand--1)">Home</a></p>';
     setTimeout(() => {
-      document.location.replace('/');
+      document.location.replace('/login');
     }, 3000);
   } else {
     alert('Something went wrong! Please try again')
