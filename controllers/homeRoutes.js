@@ -23,13 +23,15 @@ router.get('/', async (req, res) => {
     });
 
     const postArray = response.map(p => p.get({plain: true}));
-
+    const cars = await Vehicle.findAll();
+    const carsArr = cars.map(car => car.get({plain: true}));
     res.render('homepage', {
       loggedIn: req.session.loggedIn,
       username: req.session.username,
       userid: req.session.userid,
       is_vendor: req.session.is_vendor,
-      postArray
+      postArray,
+      carsArr
     });
   } catch(e) {
     res.status(500).json(e);
