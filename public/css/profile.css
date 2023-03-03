@@ -118,3 +118,11 @@
 .change-account button:active {
   transform: scale(0.9);
 }
+
+.please-log-in {
+  color: var(--color-brand--1);
+}
+
+.please-log-in p a {
+  color: var(--color-brand--2);
+}
