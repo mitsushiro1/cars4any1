@@ -1,20 +1,39 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#post-title').value.trim();
-    const body = document.querySelector('#post-body').value.trim();
+    const make = document.querySelector('#make').value.trim();
+    const model = document.querySelector('#model').value.trim();
+    const year = document.querySelector('#year').value.trim();
+    const color = document.querySelector('#color').value.trim();
+    const isLuxury = document.querySelector('#is-luxury').checked;
+    const bodyType = document.querySelector('#body-type').value.trim();
+    const fuelType = document.querySelector('#fuel-type').value.trim();
+    const seatingCapacity = document.querySelector('#seating-capacity').value.trim();
+    const isAutomatic = document.querySelector('#is-automatic').checked;
+    const filename = document.querySelector('#filename').value.trim();
   
-    if (title && body) {
-      const response = await fetch(`/api/posts`, {
+    if (make && model && year && color && bodyType && fuelType && seatingCapacity && filename) {
+      const response = await fetch(`/api/cars`, {
         method: 'POST',
-        body: JSON.stringify({ title, body }),
+        body: JSON.stringify({
+          make,
+          model,
+          year,
+          color,
+          is_luxury: isLuxury,
+          body_type: bodyType,
+          fuel_type: fuelType,
+          seating_capacity: seatingCapacity,
+          is_automatic: isAutomatic,
+          filename,
+        }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/cars');
       } else {
         alert('Failed to create post');
       }
@@ -25,12 +44,12 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`/api/cars/${id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.reload();
       } else {
         alert('Failed to delete post');
       }
@@ -41,34 +60,42 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      // Get the updated post data
-      const title = document.querySelector('#update-title').value.trim();
-      const body = document.querySelector('#update-body').value.trim();
-      const updatedPost = { title, body };
+      const make = document.querySelector('#update-make').value.trim();
+      const model = document.querySelector('#update-model').value.trim();
+      const year = document.querySelector('#update-year').value.trim();
+      const color = document.querySelector('#update-color').value.trim();
+      const isLuxury = document.querySelector('#update-is-luxury').checked;
+      const bodyType = document.querySelector('#update-body-type').value.trim();
+      const fuelType = document.querySelector('#update-fuel-type').value.trim();
+      const seatingCapacity = document.querySelector('#update-seating-capacity').value.trim();
+      const isAutomatic = document.querySelector('#update-is-automatic').checked;
+      const filename = document.querySelector('#update-filename').value.trim();
   
-      const response = await fetch(`/api/posts/${id}`, {
+      const updatedCar = {
+        make,
+        model,
+        year,
+        color,
+        is_luxury: isLuxury,
+        body_type: bodyType,
+        fuel_type: fuelType,
+        seating_capacity: seatingCapacity,
+        is_automatic: isAutomatic,
+        filename,
+      };
+  
+      const response = await fetch(`/api/cars/${id}`, {
         method: 'PUT',
-        body: JSON.stringify(updatedPost),
+        body: JSON.stringify(updatedCar),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.reload();
       } else {
         alert('Failed to update post');
       }
     }
   };
   
-  document
-    .querySelector('.new-post-form')
-    .addEventListener('submit', newFormHandler);
-  
-  document
-    .querySelector('.post-list')
-    .addEventListener('click', delButtonHandler);
-  
-  document
-    .querySelector('.post-list')
-    .addEventListener('click', updateButtonHandler);
-  
+  document.querySelector('.new-car-form').addEventListener('submit', newFormHandler);
