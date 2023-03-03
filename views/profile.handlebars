@@ -1,0 +1,30 @@
+<div class="profile-page-container">
+  {{#if loggedIn}}
+  <h3>Profile</h3>
+  <div class="basic-info">
+    <div>User ID: <span id="profile-userid">{{userid}}</span></div>
+    <div>First Name: {{username}}</div>
+    <div>Last Name: {{lastname}} </div>
+    <div>Email: {{email}}<button id="update-email">Update Email</button></div>
+    <div>Is this a vendor account?: {{is_vendor}}<button id="update-account">Update Account</button></div>
+  </div>
+  {{else}}
+  <p>Please <a href="/login">login</a></p>
+  {{/if}}
+  <div class="change-email hide">
+    <p>Please enter your new email address here</p>
+    <input id="new-email" type="email" required>
+    <div><button id="CE-update">Update</button>
+    <button id="CE-close">Close</button></div>
+  </div>
+  <div class="change-account hide">
+    <p>Are you sure you want to change account type?</p>
+    <div><button id="CA-yes">Yes</button>
+    <button id="CA-no">No</button></div>
+  </div>
+  </div>
+  <script src="/js/profile.js"></script>
+</div>
+
+
+

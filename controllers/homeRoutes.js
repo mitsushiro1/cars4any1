@@ -15,6 +15,22 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/profile', async (req, res) => {
+  try {
+
+    res.render('profile', {
+      loggedIn: req.session.loggedIn,
+      username: req.session.username,
+      lastname: req.session.lastname,
+      email: req.session.email,
+      userid: req.session.userid,
+      is_vendor: req.session.is_vendor
+    });
+  } catch(e) {
+    res.status(500).json(e);
+  }
+});
+
 router.get('/login', (req, res) => {
   try {
     res.render('login');

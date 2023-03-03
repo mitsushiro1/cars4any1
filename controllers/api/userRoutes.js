@@ -95,7 +95,9 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.username = user.first_name;
+      req.session.lastname = user.last_name;
       req.session.userid = user.id;
+      req.session.email = user.email;
       req.session.is_vendor = user.is_vendor;
       res
         .status(200)
@@ -117,4 +119,29 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.patch('/:id', async (req, res) => {
+  try {
+    const { first_name, last_name, email, password, is_vendor, user_city } = req.body;
+
+    const user = await User.findByPk(req.params.id);
+    if (first_name) user.first_name = first_name;
+    if (last_name) user.last_name = last_name;
+    if (email) user.email = email;
+    if (is_vendor) user.is_vendor = is_vendor;
+    if (user_city) user.user_city = user_city;
+    await user.save();
+
+    // return the updated user
+    res.json(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 module.exports = router;
+
+
+
+
+
