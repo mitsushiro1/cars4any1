@@ -1,0 +1,20 @@
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="/images/{{filename}}" class="card-img" alt="{{make}} {{model}}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{make}} {{model}}</h5>
+        <p class="card-text">Year: {{year}}</p>
+        <p class="card-text">Color: {{color}}</p>
+        <p class="card-text">Luxury: {{#if is_luxury}}Yes{{else}}No{{/if}}</p>
+        <p class="card-text">Body Type: {{body_type}}</p>
+        <p class="card-text">Fuel Type: {{fuel_type}}</p>
+        <p class="card-text">Seating Capacity: {{seating_capacity}}</p>
+        <p class="card-text">Transmission: {{#if is_automatic}}Automatic{{else}}Manual{{/if}}</p>
+        <p class="card-text"><small class="text-muted">Filename: {{filename}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
