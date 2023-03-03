@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User, City, Vehicle, Posting, Comment} = require('../models');
+const { User, Vehicle, Posting, Comment} = require('../models');
 
 const usersData = require('./usersData.json');
 const carsData = require('./carsData.json');
@@ -16,3 +16,4 @@ async function seedAll() {
 }
 
 seedAll();
+

@@ -1,29 +1,83 @@
 
-<div class="signup-form-wrapper">
-  <h2>Please sign up</h2>
-  <form>
-    <label for="first-name-input">First Name</label><br>
-    <input type="text" id="first-name-input" required><br>
-    <label for="last-name-input">Last Name</label><br>
-    <input type="text" id="last-name-input" required><br>
-    <label for="email-input">Email</label><br>
-    <input type="text" id="email-input" required><br>
-    <label for="password-input">Password</label><br>
-    <input type="password" id="password-input" minlength="8" required><br>
-    <label for="password-confirm">Re-enter password</label><br>
-    <input type="password" id="password-confirm" minlength="8" required><br>
+<div class="signup-page">
+  <div class="signup-form-wrapper">
+    <h2>Please sign up</h2>
+    <form>
+    <div class="signup-form-control">
+      <input type="text" id="first-name-input" required>
+      <label for="first-name-input">First Name</label>
+    </div>
+    <div class="signup-form-control">
+      <input type="text" id="last-name-input" required>
+      <label for="last-name-input">Last Name</label>
+    </div>
+    <div class="signup-form-control">
+      <input type="text" id="email-input" required>
+      <label for="email-input">Email</label>
+    </div>
+    <div class="signup-form-control">
+      <input type="password" id="password-input" minlength="8" required>
+      <label for="password-input">Password</label>
+    </div>
+    <div class="signup-form-control">
+      <input type="password" id="password-confirm" minlength="8" required>
+      <label for="password-confirm">Re-enter-password</label>
+    </div>
     <label>Are you a vendor?</label><br>
     <label for="">Yes<input type="radio" name="vendor" id="isVendor"></label>
     <label for="">No<input type="radio" name="vendor" id="notVendor" checked></label><br>
     <label for="location">Please select your location</label><br>
     <select id="location">
-      <option value="1">Scarborough</option>
-      <option value="2">North York</option>
-      <option value="3">Markham</option>
+      <option value="Toronto" selected>Toronto</option>
+      <option value="Ottawa">Ottawa</option>
+      <option value="Durham">Durham</option>
+      <option value="Halton">Halton</option>
+      <option value="London">London</option>
+      <option value="Windsor">Windsor</option>
+      <option value="Kitchener">Kitchener</option>
+      <option value="Kingston">Kingston</option>
+      <option value="Thunder Bay">Thunder Bay</option>
+      <option value="Hamilton">Hamilton</option>
+      <option value="Guelph">Guelph</option>
+      <option value="Barrie">Barrie</option>
+      <option value="Sudbury">Sudbury</option>
+      <option value="St. Catharines">St. Catharines</option>
+      <option value="Cambridge">Cambridge</option>
+      <option value="Niagara Falls">Niagara Falls</option>
+      <option value="Ajax">Ajax</option>
+      <option value="Clarington">Clarington</option>
+      <option value="Brock">Brock</option>
+      <option value="Oshawa">Oshawa</option>
+      <option value="Pickering">Pickering</option>
+      <option value="Scugog">Scugog</option>
+      <option value="Uxbridge">Uxbridge</option>
+      <option value="Whitby">Whitby</option>
+      <option value="Burlington">Burlington</option>
+      <option value="Halton Hills">Halton Hills</option>
+      <option value="Milton">Milton</option>
+      <option value="Oakville">Oakville</option>
+      <option value="Brampton">Brampton</option>
+      <option value="Caledon">Caledon</option>
+      <option value="Mississauga">Mississauga</option>
+      <option value="Aurora">Aurora</option>
+      <option value="East Gwillimbury">East Gwillimbury</option>
+      <option value="Georgina">Georgina</option>
+      <option value="King">King</option>
+      <option value="Markham">Markham</option>
+      <option value="Newmarket">Newmarket</option>
+      <option value="Richmond Hill">Richmond Hill</option>
+      <option value="Vaughan">Vaughan</option>
+      <option value="Whitchurch-Stouffville">Whitchurch-Stouffville</option>
+      <option value="Mono">Mono</option>
+      <option value="Orangeville">Orangeville</option>
+      <option value="Bradford West Gwillimbury">Bradford West Gwillimbury</option>
+      <option value="New Tecumseth">New Tecumseth</option>
     </select><br>
     <button id="signup-button" type="submit">Sign up</button>
     <button id="go-back-btn">Go back</button>
   </form>
   <script src="/js/signup-form.js"></script>
+  <script src="/js/signup-animation.js"></script>
+  </div>
 </div>
     

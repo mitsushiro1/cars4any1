@@ -1,0 +1,52 @@
+.signup-form-control {
+  position: relative;
+  margin: 10px 0 20px;
+  width: 300px;
+}
+
+.signup-form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1.8px var(--color-brand--2) solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.signup-form-control input:focus,
+.signup-form-control input:valid {
+  outline: 0;
+}
+
+.signup-form-control label {
+  color: var(--color-brand--1);
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.signup-form-control label span {
+  display: inline-block;
+  font-size: 13px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.signup-form-control input:focus + label span,
+.signup-form-control input:valid + label span {
+  transform: translateY(-30px);
+}
+
+#signup-button, #go-back-btn {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 80px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  margin-top: 20px;
+}
