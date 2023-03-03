@@ -74,7 +74,7 @@ CA_yes.addEventListener('click', async (e) => {
     await fetch('/api/users/logout', {
       method: 'POST'
     });
-    document.location.reload();
+    document.location.replace('/');
   } else {
     alert('Something went wrong, please try again');
   }
