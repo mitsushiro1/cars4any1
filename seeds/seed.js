@@ -3,7 +3,6 @@ const { User, City, Vehicle, Posting, Comment} = require('../models');
 
 const usersData = require('./usersData.json');
 const carsData = require('./carsData.json');
-const citiesData = require('./citiesData.json');
 const commentsData = require('./commentsData.json');
 const postingsData = require('./postingsData.json');
 
@@ -11,7 +10,6 @@ const postingsData = require('./postingsData.json');
 async function seedAll() {
   
   await Vehicle.bulkCreate(carsData);
-  await City.bulkCreate(citiesData);
   await User.bulkCreate(usersData);
   await Posting.bulkCreate(postingsData);
   await Comment.bulkCreate(commentsData);
