@@ -2,11 +2,11 @@
   {{#each postArray as |post| }}
   <div class="col">
     <div class="card h-100">
-      <img src="/images/{{post.Vehicle.filename}}" class="card-img-top" alt="{{post.Vehicle.make}} {{post.Vehicle.model}}">
+      <img src="/images/{{post.vehicle.filename}}" class="card-img-top" alt="{{post.vehicle.make}} {{post.vehicle.model}}">
       <div class="card-body">
         <h5 class="card-title">{{post.title}}</h5>
         <p class="card-text">{{post.description}}</p>
-        <p class="card-text">{{post.Vehicle.year}} {{post.Vehicle.color}} {{post.Vehicle.body_type}} {{#if post.Vehicle.is_luxury}}Luxury{{else}}Standard{{/if}}</p>
+        <p class="card-text">{{post.vehicle.year}} {{post.vehicle.color}} {{post.vehicle.body_type}} {{#if post.vehicle.is_luxury}}Luxury{{else}}Standard{{/if}}</p>
         <a href="/postings/{{post.id}}" class="btn btn-primary">View Details</a>
       </div>
     </div>
