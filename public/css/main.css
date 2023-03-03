@@ -366,3 +366,17 @@ body {
 }
 
 /* above are styles for login form */
+
+#welcome {
+  margin: 0 auto;
+  padding-bottom: 35px;
+  min-height: 300px;
+  width: 600px;
+  font-size: 25px;
+}
+
+#welcome p {
+  margin-top: 35px;
+}
+
+/* above are styles for welcome */
