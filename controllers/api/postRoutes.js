@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const postingData = await Posting.findAll({ 
       include: [
-        Vehicle,
+        {model: Vehicle},
         {
           model: User,
           attributes: [
@@ -23,28 +23,6 @@ router.get('/', async (req, res) => {
       ]
     });
 
-
-    /*
-      {
-        id: 1,
-        title: "My Post",
-        vehicle: {
-          id:
-          make:
-          model:
-          ...
-        },
-        user: {
-          id: 
-          first_name:
-          last_name:
-          emaiL:
-        }
-      }
-
-
-    */
-
     res.status(200).json(postingData);
 
   } catch (err) {
@@ -53,20 +31,24 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/posting/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    const postingData = await Posting.findByPk(req.params.id, {
+    const postingData = await Posting.findByPk(req.params.id, { 
       include: [
-        { 
-          model: Vehicle,
+        {model: Vehicle},
+        {
           model: User,
-          model: Comment,
-        },
-      ],
-    });
+          attributes: [
+            "id",
+            "first_name",
+            "last_name",
+            "email"
+          ]
+        }
+      ]});
 
-    const posting = postingData.get({ plain: true });
-    res.render('post', { posting });
+    res.status(200).json(postingData);
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
