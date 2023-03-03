@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('./../../models/index');
+const { Comment } = require('../../models/index');
 
 router.get('/', async (req,res) => {
   try {
@@ -42,7 +42,7 @@ router.post('/', (req,res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const id = await Category.update(
+    const id = await Comment.update(
       {
         comment: req.body.comment
       },
