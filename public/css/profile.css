@@ -1,0 +1,120 @@
+.profile-page-container {
+  width: 100%;
+  height: 70%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile-page-container h3 {
+  color: var(--color-brand--2);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.profile-page-container .basic-info {
+  width: 50%;
+  min-width: 400px;
+  height: 50%;
+  min-height: 400px;
+  background-color: var(--color-dark--1);
+  border: 1px solid var(--color-brand--1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 15px;
+  color:var(--color-brand--1);
+}
+
+.profile-page-container .basic-info button {
+  width: 150px;
+  height: 30px;
+  background-color: var(--color-brand--2);
+  color: var(--color-light--3);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-page-container .basic-info button:active {
+  transform: scale(0.9);
+}
+
+.change-email {
+  width: 70%;
+  height: 30%;
+  background-color: var(--color-dark--2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--color-brand--2);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--color-brand--1);
+}
+
+.change-email.hide {
+  display: none;
+}
+
+
+.change-email button {
+  width: 150px;
+  height: 30px;
+  background-color: var(--color-brand--2);
+  color: var(--color-light--3);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.change-email button:active {
+  transform: scale(0.9);
+}
+
+.change-account {
+  width: 70%;
+  height: 30%;
+  background-color: var(--color-dark--2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--color-brand--2);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--color-brand--1);
+}
+
+.change-account.hide {
+  display: none;
+}
+
+
+.change-account button {
+  width: 150px;
+  height: 30px;
+  background-color: var(--color-brand--2);
+  color: var(--color-light--3);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.change-account button:active {
+  transform: scale(0.9);
+}
