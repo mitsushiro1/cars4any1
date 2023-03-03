@@ -1,12 +1,13 @@
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-  {{#each cars}}
+  {{#each postArray as |post| }}
   <div class="col">
     <div class="card h-100">
-      <img src="/images/{{filename}}" class="card-img-top" alt="{{make}} {{model}}">
+      <img src="/images/{{post.vehicle.filename}}" class="card-img-top" alt="{{post.vehicle.make}} {{post.vehicle.model}}">
       <div class="card-body">
-        <h5 class="card-title">{{make}} {{model}}</h5>
-        <p class="card-text">{{year}} {{color}} {{body_type}} {{#if is_luxury}}Luxury{{else}}Standard{{/if}}</p>
-        <a href="/cars/{{make}}/{{model}}" class="btn btn-primary">View Details</a>
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text">{{post.description}}</p>
+        <p class="card-text">{{post.vehicle.year}} {{post.vehicle.color}} {{post.vehicle.body_type}} {{#if post.vehicle.is_luxury}}Luxury{{else}}Standard{{/if}}</p>
+        <a href="/postings/{{post.id}}" class="btn btn-primary">View Details</a>
       </div>
     </div>
   </div>
