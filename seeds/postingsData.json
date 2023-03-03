@@ -1,7 +1,12 @@
 [
 	{
-		"title": "Test title",
+		"title": "2012 Honda Accord, daily charge $50 only",
 		"vehicle_id": 1,
 		"user_id": 1
+	},
+	{
+		"title": "2017 Kia Sorento, daily charge $50 only",
+		"vehicle_id": 2,
+		"user_id": 2
 	}
 ]

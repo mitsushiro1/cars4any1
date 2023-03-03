@@ -127,7 +127,7 @@ router.patch('/:id', async (req, res) => {
     if (first_name) user.first_name = first_name;
     if (last_name) user.last_name = last_name;
     if (email) user.email = email;
-    if (is_vendor) user.is_vendor = is_vendor;
+    if (is_vendor !== undefined) user.is_vendor = is_vendor;
     if (user_city) user.user_city = user_city;
     await user.save();
 
