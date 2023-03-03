@@ -1,8 +1,14 @@
 {{#if loggedIn}}
   <h5>Now you are logged in</h5>
 {{else}}
-  <a href="/login">Login</a>
-  {{#each postArray as |post|}}
-  <h1>{{post.title}}</h1>
-  {{/each}}
+
+<article id="welcome">
+  <p>
+    Welcome to our car rental website, where you can easily find and book the perfect car for your needs. Whether you're traveling for business or pleasure, our wide selection of vehicles has something for everyone. From sleek sports cars to spacious SUVs, we have it all.
+  </p>
+  <p>
+    To get started, please <a href="/login">login</a> or <a href="signup">register</a>.
+  </p>
+</article>
+
 {{/if}}
