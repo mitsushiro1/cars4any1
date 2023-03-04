@@ -1,7 +1,152 @@
 [
 	{
-		"comment": "Test comment",
+		"comment": "Nice car, i like it.",
 		"posting_id": 1,
 		"user_id": 1
+	},
+	{
+		"comment": "For one day, it's good.",
+		"posting_id": 1,
+		"user_id": 1
+	},
+	{
+		"comment": "Thank you, I liked everything.",
+		"posting_id": 2,
+		"user_id": 1
+	},
+	{
+		"comment": "Smooth ride, great gas mileage.",
+		"posting_id": 2,
+		"user_id": 1
+	},
+	{
+		"comment": "Comfortable and spacious interior.",
+		"posting_id": 3,
+		"user_id": 1
+	},
+	{
+		"comment": "Reliable and easy to drive.",
+		"posting_id": 3,
+		"user_id": 1
+	},
+	{
+		"comment": "Impressive handling and acceleration.",
+		"posting_id": 4,
+		"user_id": 5
+	},
+	{
+		"comment": "xClean and well-maintained vehicle.",
+		"posting_id": 4,
+		"user_id": 5
+	},
+	{
+		"comment": "Excellent customer service experience.",
+		"posting_id": 5,
+		"user_id": 5
+	},
+	{
+		"comment": "Affordable rental price, good value.",
+		"posting_id": 5,
+		"user_id": 5
+	},
+	{
+		"comment": "Convenient pickup and drop-off process.",
+		"posting_id": 6,
+		"user_id": 2
+	},
+	{
+		"comment": "Fun and sporty driving experience.",
+		"posting_id": 6,
+		"user_id": 2
+	},
+	{
+		"comment": "High-tech features and amenities.",
+		"posting_id": 7,
+		"user_id": 3
+	},
+	{
+		"comment": "Plenty of storage space available.",
+		"posting_id": 7,
+		"user_id": 3
+	},
+	{
+		"comment": "Stylish and attractive design.",
+		"posting_id": 8,
+		"user_id": 6
+	},
+	{
+		"comment": "Perfect vehicle for road trips.",
+		"posting_id": 8,
+		"user_id": 6
+	},
+	{
+		"comment": "Safe and secure driving experience.",
+		"posting_id": 9,
+		"user_id": 6
+	},
+	{
+		"comment": "Easy to navigate and park.",
+		"posting_id": 9,
+		"user_id": 6
+	},
+	{
+		"comment": "Versatile and practical for everyday use.",
+		"posting_id": 10,
+		"user_id": 7
+	},
+	{
+		"comment": "Smooth and quiet engine performance.",
+		"posting_id": 10,
+		"user_id": 7
+	},
+	{
+		"comment": "Responsive brakes and steering.",
+		"posting_id": 11,
+		"user_id": 7
+	},
+	{
+		"comment": "Highly recommended rental car company.",
+		"posting_id": 11,
+		"user_id": 7
+	},
+	{
+		"comment": "No issues or problems encountered.",
+		"posting_id": 12,
+		"user_id": 8
+	},
+	{
+		"comment": "Spacious trunk for luggage storage.",
+		"posting_id": 12,
+		"user_id": 8
+	},
+	{
+		"comment": "Comfortable seats for long drives.",
+		"posting_id": 13,
+		"user_id": 8
+	},
+	{
+		"comment": "Great sound system for music lovers.",
+		"posting_id": 13,
+		"user_id": 8
+	},
+	{
+		"comment": "Fuel-efficient and environmentally friendly.",
+		"posting_id": 14,
+		"user_id": 9
+	},
+	{
+		"comment": "Well-equipped with safety features.",
+		"posting_id": 14,
+		"user_id": 9
+	},
+	{
+		"comment": "Enjoyable and hassle-free rental experience.",
+		"posting_id": 15,
+		"user_id": 9
+	},
+	{
+		"comment": "Perfect for exploring new places.",
+		"posting_id": 15,
+		"user_id": 9
 	}
 ]
