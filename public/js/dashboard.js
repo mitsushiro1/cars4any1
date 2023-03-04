@@ -15,6 +15,18 @@ const postCommentInput = document.querySelectorAll('.article_comment');
 
 const contentDiv = document.querySelectorAll('.content-div');
 
+const commentsList = document.querySelectorAll('.comments-list');
+
+const showComments = document.querySelectorAll('.show-comments');
+
+showComments.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.target.parentElement.querySelector('.comments-list').classList.toggle('hidden');
+  });
+});
+
 contentDiv.forEach(async (container) => {
   const postId = parseInt(container.parentElement.querySelector('.articleid').innerText);
   const response = await fetch(`/api/postings/${postId}`);
@@ -23,6 +35,20 @@ contentDiv.forEach(async (container) => {
 });
 
 getAllCars();
+
+commentsList.forEach(async (list) => {
+  const postId = list.parentElement.parentElement.querySelector('h6 .articleid').innerText;
+  const response = await fetch(`/api/postings/${postId}`);
+  const data = await response.json();
+  console.log(data);
+  data.comments.forEach(comment => {
+    const commentCard = document.createElement('div');
+    commentCard.classList.add('comment-card');
+    commentCard.innerHTML = `<div class="message-left">${comment.comment}</div>
+    <div class="time">CREATED AT: ${comment.createdAt}</div><div class="time">LAST UPDATE: ${comment.updatedAt}</div>`;
+    list.appendChild(commentCard);
+  });
+});
 
 addCommentBtns.forEach(button => {
   button.addEventListener('click', async (e) => {
@@ -120,4 +146,6 @@ async function getAllCars() {
     document.querySelector('#select-vehicle').appendChild(option);
   });
 }
+
+
 

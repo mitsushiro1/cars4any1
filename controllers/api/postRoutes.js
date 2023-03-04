@@ -16,6 +16,9 @@ router.get('/', async (req, res) => {
             "email",
             "user_city"
           ]
+        },
+        {
+          model: Comment
         }
       ]
     });
@@ -41,6 +44,8 @@ router.get('/:id', async (req, res) => {
             "last_name",
             "email"
           ]
+        }, {
+          model: Comment
         }
       ]});
 
