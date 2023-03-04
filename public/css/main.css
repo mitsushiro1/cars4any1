@@ -372,15 +372,18 @@ a {
 /* above are styles for login form */
 
 #welcome {
-  margin: 0 auto;
-  padding-bottom: 35px;
+  margin: 45px auto;
   min-height: 300px;
-  width: 600px;
+  width: 680px;
   font-size: 25px;
+  padding: 10px;
+  border: 1px solid var(--color-brand--1);
+  border-radius: 20px;
+  background-color: var(--color-dark--1);
 }
 
 #welcome p {
-  margin-top: 35px;
+  padding: 25px 25px 25px 25px;
 }
 
 /* above are styles for welcome before login */
@@ -388,21 +391,26 @@ a {
 #cars_bl {
   display: flex;
   flex-wrap: wrap;
-  width: 900px;
+  width: 906px;
   margin: 0 auto;
 }
 
 .cars_block {
   margin: 25px 25px 0 25px;
+  background-color: var(--color-dark--1);
+  border: 1px solid var(--color-brand--1);
+  border-radius: 20px;
+
 }
 
 .cars_block img {
   width: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .cars_block ul {
-  margin-top: 10px;
-  margin-left: 25px;
+  margin: 10px 0 15px 25px;
 }
 
 .cars_block ul li {
