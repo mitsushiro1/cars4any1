@@ -20,7 +20,8 @@ router.get('/', async (req, res) => {
       attributes: [
         "id",
         "title"
-      ]
+      ],
+      order: [['updatedAt', 'DESC']]
     });
 
     const postArray = response.map(p => p.get({plain: true}));

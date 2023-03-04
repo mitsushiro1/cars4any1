@@ -4,7 +4,7 @@
     <h3>Manage my posts</h3>
     {{#each posts as |post|}}
     <div class="manage-list-card">
-      <p>"<span>{{post.content}}</span>" <span class="manage-post-id">POST ID:{{post.id}}</span></p>
+      <p>"<span>{{post.content}}</span>" POST ID: <span class="manage-post-id">{{post.id}}</span></p>
       <button class="delete-my-post">delete</button>
       <button>update</button>
     </div>
