@@ -28,7 +28,27 @@ addCommentBtns.forEach(button => {
   button.addEventListener('click', async (e) => {
     e.preventDefault();
     e.stopPropagation();
-
+    const postId = button.parentElement.parentElement.parentElement.parentElement.querySelector('h6 .articleid').innerText;
+    const comment = button.parentElement.querySelector('.article_comment').value;
+    console.log(comment, postId);
+    if (!comment) {
+      alert('You need to add something before posting a comment');
+      return;
+    }
+    const response = await fetch('/api/comments', {
+      method: 'POST',
+      body: JSON.stringify({
+        comment,
+        posting_id: parseInt(postId)
+      }),
+      headers: {'Content-type': 'application/json'}
+    });
+    if (response.ok) {
+      button.parentElement.querySelector('.article_comment').innerText = '';
+      document.location.reload();
+    } else {
+      alert('Something went wrong, try again');
+    }
   });
 });
 
