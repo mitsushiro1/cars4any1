@@ -3,12 +3,33 @@
   <div class="myposts-container">
     <h3>Manage my posts</h3>
     {{#each posts as |post|}}
-    <div>{{post.content}}</div>
+    <div class="manage-list-card">
+      <p>"<span>{{post.title}}</span>" POST ID: <span class="manage-post-id">{{post.id}}</span></p>
+      <button class="delete-my-post">delete</button>
+      <button class="update-my-post">update</button>
+    </div>
     {{/each}}
     <h3>Manage my comments</h3>
     {{#each comments as |comment|}}
-    <div>{{comment.comment}}</div>
+    <div class="manage-list-card"><p>"<span>{{comment.comment}}</span>" COMMENT ID:<span class="manage-comment-id">{{comment.id}}</span></p>
+      <button class="delete-my-comment">delete</button>
+      <button class="update-my-comment">update</button>
+    </div>
     {{/each}}
   </div>
-  <script src="/js/myposts.js"></script>
 </div>
+<div class="update-post-form invisible" id="update-post-form">
+  <label for="">Title</label><br>
+  <input type="text" id="update-post-title-input"><br>
+  <label for="">Post</label><br>
+  <textarea name="" id="update-post-textarea" cols="30" rows="10"></textarea><br>
+  <button id="submit-updated-post">Update</button>
+  <button id="close-update-post-form">Close</button>
+</div>
+<div class="update-comment-form invisible">
+  <label for="">Comment</label><br>
+  <textarea name="" id="update-comment-textarea" cols="30" rows="10"></textarea><br>
+  <button id="submit-updated-comment">Update</button>
+  <button id="close-update-comment-form">Close</button>
+</div>
+<script src="/js/myposts.js"></script>

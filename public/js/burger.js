@@ -10,7 +10,3 @@ burgerBtn.addEventListener('click', (e) => {
 const searchDiv = document.querySelector('.search');
 const btn = document.querySelector('#search-btn');
 const input = document.querySelector('.input');
-
-btn.addEventListener('click', () => {
-  searchDiv.classList.toggle('active');
-});

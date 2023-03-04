@@ -63,22 +63,30 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   
   try {
-    const commData = await Comment.destroy({
+    const response = await Comment.destroy({
       where: {
-        id: req.params.id,
-      },
+        id: req.params.id
+      }
     });
-
-    if (!data) {
-      res.status(404).json({ message: 'No comments found with This id!'});
-      return;
-    }
-
-    res.status(200).json(data);
+    res.status(200).json(response);
   } catch (err) {
     res.status(500).json(err);
   }
   
 });
+
+router.patch('/:id', async (req, res) => {
+  try {
+    const {comment} = req.body;
+    const post = await Comment.findByPk(req.params.id);
+    if (comment) post.comment = comment;
+    await post.save();
+    res.json(post);
+  } catch(e) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 module.exports = router;

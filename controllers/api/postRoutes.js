@@ -101,17 +101,25 @@ router.delete('/:id', async (req, res) => {
     const postData = await Posting.destroy({
       where: {
         id: req.params.id,
-      },
+      }
     });
-
-    if (!postData) {
-      res.status(404).json({ message: 'No post found with that id!' });
-      return;
-    }
-
-    res.status(200).json(categoryData);
+    res.status(200).json(postData);
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+router.patch('/:id', async (req, res) => {
+  try {
+    const {title, content} = req.body;
+    const post = await Posting.findByPk(req.params.id);
+    if (title) post.title = title;
+    if (content) post.content = content;
+    await post.save();
+    res.json(post);
+  } catch(e) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 });
 

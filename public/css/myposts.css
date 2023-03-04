@@ -1,5 +1,7 @@
 .greeting {
   color: var(--color-light--3);
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .myposts-wrapper {
@@ -21,6 +23,100 @@
 
 .myposts-wrapper .myposts-container h3 {
   color: var(--color-brand--2);
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.manage-list-card {
+  min-height: 30px;
+  padding: 10px;
+}
+
+.manage-list-card p {
+  color: var(--color-brand--1);
+  font-size: 0.8rem;
+}
+
+.manage-list-card button {
+  cursor: pointer;
+  float: right;
+  transform: translateY(-20px);
+  margin-right: 10px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  padding: 3px;
+}
+
+#update-post-form {
+  position: fixed;
+  top: 25%;
+  left: 20%;
+  width: 550px;
+  height: 400px;
+  background-color: var(--color-dark--1);
+  border-radius: 10px;
+  border: 1px solid var(--color-brand--1);
+  padding: 20px;
+  color: var(--color-brand--1);
+}
+
+#update-post-form input {
+  width: 100%;
+}
+
+#update-post-form.invisible {
+  display: none;
+}
+
+#update-post-form textarea {
+  width: 100%;
+}
+
+#update-post-form button {
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  padding: 3px;
+}
+
+.update-comment-form {
+  position: fixed;
+  top: 25%;
+  left: 20%;
+  width: 550px;
+  background-color: var(--color-dark--1);
+  border-radius: 10px;
+  border: 1px solid var(--color-brand--1);
+  padding: 20px;
+  color: var(--color-brand--1);
+}
+
+.update-comment-form input {
+  width: 100%;
+}
+
+.update-comment-form.invisible {
+  display: none;
+}
+
+.update-comment-form textarea {
+  width: 100%;
+}
+
+.update-comment-form button {
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  padding: 3px;
 }
