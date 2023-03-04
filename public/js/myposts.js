@@ -10,6 +10,10 @@ const closeUpdatePostBtn = document.querySelector('#close-update-post-form');
 
 const submitUpdatedPost = document.querySelector('#submit-updated-post');
 
+const submitUpdatedComment = document.querySelector('#submit-updated-comment');
+
+const closeUpdateCommentBtn = document.querySelector('#close-update-comment-form');
+
 let postIdToUpdate;
 let commentIdToUpdate;
 
@@ -101,11 +105,44 @@ submitUpdatedPost.addEventListener('click', async (e) => {
 });
 
 updateCommentBtns.forEach(button => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener('click', async (e) => {
     e.preventDefault();
     e.stopPropagation();
     commentIdToUpdate = button.parentElement.querySelector('.manage-comment-id').innerText;
     console.log(commentIdToUpdate);
+    document.querySelector('.update-comment-form').classList.remove('invisible');
+
+    const response = await fetch(`/api/comments/${commentIdToUpdate}`, {
+      method: 'GET'
+    });
+    const data = await response.json();
+    console.log(data);
+    const textArea = document.querySelector('#update-comment-textarea');
+    textArea.value = data.comment;
   });
+});
+
+submitUpdatedComment.addEventListener('click', async (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  const textArea = document.querySelector('#update-comment-textarea');
+  const newComment = textArea.value;
+
+  const response = await fetch(`/api/comments/${commentIdToUpdate}`, {
+    method: 'PATCH',
+    body: JSON.stringify({comment: newComment}),
+    headers: {"Content-type": "application/json"}
+  });
+  if (response.ok) {
+    document.location.reload();
+  } else {
+    alert('Something went wrong, try again');
+  }
+});
+
+closeUpdateCommentBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  document.querySelector('.update-comment-form').classList.add('invisible');
 });
 
