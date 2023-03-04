@@ -1,20 +1,92 @@
 [
 	{
 		"title": "2012 Honda Accord, daily charge $50 only",
-		"content": "this is a nice car",
+		"content": "This is a nice car",
 		"vehicle_id": 1,
 		"user_id": 1
 	},
 	{
-		"title": "2021 Audi R8, leave your message",
-		"content": "this is a nice car",
+		"title": "2021 Audi R8, daily charge $45 only",
+		"content": "This is a nice car",
 		"vehicle_id": 10,
 		"user_id": 1
 	},
 	{
-		"title": "2017 Kia Sorento",
-		"content": "this is a really great car",
+		"title": "2017 Kia Sorento, daily charge $30 only",
+		"content": "This is a really great car",
 		"vehicle_id": 2,
 		"user_id": 1
+	},
+	{
+		"title": "2021 Audi R8, daily charge $50 only",
+		"content": "This is a really great car",
+		"vehicle_id": 10,
+		"user_id": 5
+	},
+	{
+		"title": "2019 GMC Savana, daily charge $25 only",
+		"content": "This is a really great car",
+		"vehicle_id": 11,
+		"user_id": 5
+	},
+	{
+		"title": "2018 Nissan Versa, daily charge $45 only",
+		"content": "This is a really great car",
+		"vehicle_id": 12,
+		"user_id": 2
+	},
+	{
+		"title": "2017 Nissan Murano, daily charge $45 only",
+		"content": "This is a really great car",
+		"vehicle_id": 13,
+		"user_id": 3
+	},
+	{
+		"title": "2013 Mazda 3, daily charge $40 only",
+		"content": "This is a really great car",
+		"vehicle_id": 17,
+		"user_id": 6
+	},
+	{
+		"title": "2014 Honda Fit, daily charge $35 only",
+		"content": "This is a really great car",
+		"vehicle_id": 18,
+		"user_id": 6
+	},
+	{
+		"title": "2011 Subaru Impreza, daily charge $55 only",
+		"content": "This is a really great car",
+		"vehicle_id": 19,
+		"user_id": 7
+	},
+	{
+		"title": "2020 Dodge Ram",
+		"content": "This is a really great car",
+		"vehicle_id": 20,
+		"user_id": 7
+	},
+	{
+		"title": "2020 Honda Civic, daily charge $45 only",
+		"content": "This is a really great car",
+		"vehicle_id": 23,
+		"user_id": 8
+	},
+	{
+		"title": "2023 BMW i4, daily charge $45 only",
+		"content": "This is a really great car",
+		"vehicle_id": 36,
+		"user_id": 8
+	},
+	{
+		"title": "2017 KIA Soul, daily charge $40 only",
+		"content": "This is a really great car",
+		"vehicle_id": 38,
+		"user_id": 9
+	},
+	{
+		"title": "2023 BMW X4, daily charge $55 only",
+		"content": "This is a really great car",
+		"vehicle_id": 39,
+		"user_id": 9
 	}
 ]

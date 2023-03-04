@@ -56,7 +56,7 @@ router.put('/:id', async (req, res) => {
     );
     res.status(200).json(id);
   } catch (err) {
-    res.status(404).json({ message: 'No comments found with this id!'});
+    res.status(404).json({ message: 'No comments found with This id!'});
   }
 });
 
@@ -70,7 +70,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!data) {
-      res.status(404).json({ message: 'No comments found with this id!'});
+      res.status(404).json({ message: 'No comments found with This id!'});
       return;
     }
 
