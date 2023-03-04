@@ -1,7 +1,20 @@
 [
 	{
-		"title": "Test title",
+		"title": "2012 Honda Accord, daily charge $50 only",
+		"content": "this is a nice car",
 		"vehicle_id": 1,
+		"user_id": 1
+	},
+	{
+		"title": "2021 Audi R8, leave your message",
+		"content": "this is a nice car",
+		"vehicle_id": 10,
+		"user_id": 1
+	},
+	{
+		"title": "2017 Kia Sorento",
+		"content": "this is a really great car",
+		"vehicle_id": 2,
 		"user_id": 1
 	}
 ]

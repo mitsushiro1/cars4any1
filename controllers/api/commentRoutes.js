@@ -1,32 +1,34 @@
 const router = require('express').Router();
-const { Comment } = require('../../models/index');
+const { User, Vehicle, Posting, Comment} = require('./../../models/index');
 
 router.get('/', async (req,res) => {
   try {
-    if (req.query.key === process.env.APIKEY) {
-      const response = await Comment.findAll();
+      const response = await Comment.findAll({
+        include: [{model: User}]
+      });
       res.status(200).json(response);
-    } else {
-      res.status(400).json({
-        message: 'You need api key to get users data'
-      })
-    }
-  }
-  catch(e) {
+    } 
+    catch(e) {
     res.status(500).json(e);
   }
 });
 
 router.get('/:id', async (req, res) => {
   try {
-    if (req.query.key === process.env.APIKEY) {
       const response = await Comment.findByPk(req.params.id);
       res.status(200).json(response);
-    } else {
-      res.status(400).json({
-        message: 'You need api key to get users data'
-      })
-    }
+  } 
+  catch(e) {
+    res.status(500).json(e);
+  }
+});
+
+router.get('/user/:id', async (req, res) => {
+  try {
+      const response = await Comment.findAll({
+        where: {user_id: req.params.id}
+      });
+      res.status(200).json(response);
   } 
   catch(e) {
     res.status(500).json(e);
