@@ -49,3 +49,15 @@
   font-size: 0.6rem;
   padding: 3px;
 }
+
+#update-post-form {
+  position: fixed;
+  top: 25%;
+  left: 20%;
+  width: 550px;
+  height: 400px;
+  background-color: var(--color-dark--2);
+  border-radius: 10px;
+  border: 1px solid var(--color-brand--1);
+  padding: 20px;
+}

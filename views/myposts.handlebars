@@ -6,16 +6,22 @@
     <div class="manage-list-card">
       <p>"<span>{{post.content}}</span>" POST ID: <span class="manage-post-id">{{post.id}}</span></p>
       <button class="delete-my-post">delete</button>
-      <button>update</button>
+      <button class="update-my-post">update</button>
     </div>
     {{/each}}
     <h3>Manage my comments</h3>
     {{#each comments as |comment|}}
     <div class="manage-list-card"><p>"<span>{{comment.comment}}</span>" COMMENT ID:<span class="manage-comment-id">{{comment.id}}</span></p>
       <button class="delete-my-comment">delete</button>
-      <button>update</button>
+      <button class="update-my-comment">update</button>
     </div>
     {{/each}}
   </div>
-  <script src="/js/myposts.js"></script>
 </div>
+<div class="update-post-form" id="update-post-form">
+  <label for="">Title</label><br>
+  <input type="text"><br>
+  <label for="">Post</label><br>
+  <textarea name="" id="" cols="30" rows="10"></textarea><br>
+</div>
+<script src="/js/myposts.js"></script>
