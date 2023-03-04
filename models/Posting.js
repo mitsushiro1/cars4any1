@@ -15,6 +15,10 @@ Posting.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
     vehicle_id: {
       type: DataTypes.INTEGER,
       references: {

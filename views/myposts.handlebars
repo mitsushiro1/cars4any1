@@ -1,0 +1,14 @@
+<p class="greeting">Hello {{username}}! Your USER ID: {{userid}}</p>
+<div class="myposts-wrapper">
+  <div class="myposts-container">
+    <h3>Manage my posts</h3>
+    {{#each posts as |post|}}
+    <div>{{post.content}}</div>
+    {{/each}}
+    <h3>Manage my comments</h3>
+    {{#each comments as |comment|}}
+    <div>{{comment.comment}}</div>
+    {{/each}}
+  </div>
+  <script src="/js/myposts.js"></script>
+</div>

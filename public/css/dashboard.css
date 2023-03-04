@@ -1,0 +1,228 @@
+.dashboard form.invisible {
+  display: none;
+}
+
+.dashboard {
+  width: 100%;
+  height: 80%;
+  min-height: 500px;
+  padding: 20px;
+}
+
+.dashboard p {
+  color: var(--color-brand--2);
+}
+
+.dashboard-btns button, .dashboard form button {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 80px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.dashboard-btns button:active {
+  transform: scale(0.9);
+}
+
+.dashboard form {
+  border: 1px solid var(--color-brand--1);
+  border-radius: 10px;
+  background-color: var(--color-dark--1);
+  position: fixed;
+  top:20%;
+  left: 35%;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 100;
+}
+
+.dashboard form label {
+  color: var(--color-brand--2);
+}
+
+.post-form-btns {
+  padding: 10px;
+  padding-left: 0;
+}
+
+.blog-post-wrapper {
+  width: 80%;
+  min-width: 400px;
+  background-color: var(--color-dark--1);
+  border: 1px solid var(--color-brand--1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.blog-post-wrapper h5 {
+  font-size: large;
+  font-weight: 400;
+  color: var(--color-brand--2);
+}
+
+.blog-post-wrapper h6 {
+  color: var(--color-brand--1);
+  font-weight: 200;
+  font-size: 0.7rem;
+}
+
+.blog-post-wrapper p {
+  margin: 10px 0;
+}
+
+.car-info {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid var(--color-brand--1);
+  padding: 10px;
+  background-color: var(--color-light--3);
+  position: relative;
+}
+
+.car-info p {
+  color: var(--color-dark--1);
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.car-info h6 {
+  color: var(--color-dark--2);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.car-info img {
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.breaker {
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-brand--1);
+  margin-bottom: 10px;
+}
+
+.content-div {
+  margin-top: 10px;
+  color: var(--color-light--1);
+  font-size: 0.6rem;
+}
+
+.content-div p {
+  color: var(--color-light--2);
+  font-size: 1rem;
+}
+
+.commenting {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 200px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1);
+  margin-top: 10px;
+}
+
+.commenting:active {
+  transform: scale(0.9);
+}
+
+.comments-wrapper {
+  padding: 10px;
+  background-color: var(--color-dark--2);
+  margin: 10px 0;
+  color: var(--color-brand--1);
+}
+
+.comments-wrapper button {
+  background-color: var(--color-brand--2);
+  border: none;
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.comments-wrapper button:active {
+  transform: scale(0.9);
+}
+
+.comments-wrapper input{
+  width: 50%;
+}
+.comments-wrapper input:focus {
+  outline: none;
+}
+.add-comment {
+  margin-top: 10px;
+}
+
+.invisible {
+  display: none;
+}
+
+.show-comments {
+  background-color: var(--color-brand--1);
+  border: none;
+  width: 200px;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1);
+  margin-top: 10px;
+}
+
+.show-comments:active {
+  transform: scale(0.9);
+}
+
+.comments-list {
+  width: 100%;
+  height: 200px;
+  overflow-X: hidden;
+  overflow-y: scroll;
+  min-height: 10px;
+  margin-top: 10px;
+  background-color: var(--color-dark--1);
+}
+
+.comment-card {
+  border: 1px solid var(--color-brand--2);
+  padding: 10px;
+  margin: 10px auto;
+  background-color: var(--color-dark--2);
+  border-radius: 10px;
+}
+
+.comment-card .message-left {
+  padding: 10px;
+  background-color: var(--color-dark--1);
+  color: var(--color-brand--1);
+}
+
+.comment-card .time {
+  font-size: 0.6rem;
+  color: var(--color-brand--1);
+}
+
+

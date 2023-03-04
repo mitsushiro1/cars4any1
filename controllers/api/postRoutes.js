@@ -13,14 +13,28 @@ router.get('/', async (req, res) => {
             "id",
             "first_name",
             "last_name",
-            "email"
+            "email",
+            "user_city"
           ]
+        },
+        {
+          model: Comment
         }
-      ],
-      attributes: [
-        "id",
-        "title"
       ]
+    });
+
+    res.status(200).json(postingData);
+
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
+
+router.get('/user/:id', async (req, res) => {
+  try {
+    const postingData = await Posting.findAll({
+      where: {user_id: req.params.id}
     });
 
     res.status(200).json(postingData);
@@ -44,6 +58,8 @@ router.get('/:id', async (req, res) => {
             "last_name",
             "email"
           ]
+        }, {
+          model: Comment
         }
       ]});
 
@@ -58,7 +74,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const postData = await Posting.create(req.body);
-    console.log(req.body);
     res.status(200).json(postData);
   } catch (err) {
     res.status(400).json(err);
@@ -83,7 +98,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const postData = await Post.destroy({
+    const postData = await Posting.destroy({
       where: {
         id: req.params.id,
       },
