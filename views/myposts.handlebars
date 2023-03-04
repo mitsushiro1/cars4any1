@@ -4,7 +4,7 @@
     <h3>Manage my posts</h3>
     {{#each posts as |post|}}
     <div class="manage-list-card">
-      <p>"<span>{{post.content}}</span>" POST ID: <span class="manage-post-id">{{post.id}}</span></p>
+      <p>"<span>{{post.title}}</span>" POST ID: <span class="manage-post-id">{{post.id}}</span></p>
       <button class="delete-my-post">delete</button>
       <button class="update-my-post">update</button>
     </div>
@@ -18,10 +18,12 @@
     {{/each}}
   </div>
 </div>
-<div class="update-post-form" id="update-post-form">
+<div class="update-post-form invisible" id="update-post-form">
   <label for="">Title</label><br>
-  <input type="text"><br>
+  <input type="text" id="update-post-title-input"><br>
   <label for="">Post</label><br>
-  <textarea name="" id="" cols="30" rows="10"></textarea><br>
+  <textarea name="" id="update-post-textarea" cols="30" rows="10"></textarea><br>
+  <button id="submit-updated-post">Update</button>
+  <button id="close-update-post-form">Close</button>
 </div>
 <script src="/js/myposts.js"></script>
