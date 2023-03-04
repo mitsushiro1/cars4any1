@@ -13,13 +13,10 @@ router.get('/', async (req, res) => {
             "id",
             "first_name",
             "last_name",
-            "email"
+            "email",
+            "user_city"
           ]
         }
-      ],
-      attributes: [
-        "id",
-        "title"
       ]
     });
 
@@ -58,7 +55,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const postData = await Posting.create(req.body);
-    console.log(req.body);
     res.status(200).json(postData);
   } catch (err) {
     res.status(400).json(err);
@@ -83,7 +79,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const postData = await Post.destroy({
+    const postData = await Posting.destroy({
       where: {
         id: req.params.id,
       },

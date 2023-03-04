@@ -1,0 +1,29 @@
+{{#each postArray as |posting|}}
+    <div class="blog-post-wrapper">
+        <h5>{{posting.title}}</h5>
+        <h6>Authored by: {{posting.user.first_name}} User ID: <span id="authorid">{{posting.user.id}}</span></h6>
+        <h6>POST ID: <span class="articleid">{{posting.id}}</span></h6>
+        <div class="car-info">
+          <p>VEHICLE INFO</p>
+          <h6>Make: {{posting.vehicle.make}}</h6>
+          <h6>Model: {{posting.vehicle.model}}</h6>
+          <h6>luxury: {{posting.vehicle.is_luxury}}</h6>
+          <h6>Year: {{posting.vehicle.year}}</h6>
+          <img src="/images/{{posting.vehicle.filename}}" alt="car">
+        </div>
+        <div class="breaker"></div>
+        <div class="content-div">
+        </div>
+        <div class="breaker"></div>
+        <div class="comment-section">
+          <button class="commenting">Leave a message</button>
+          <div class="comments-wrapper invisible">
+            <div class="comment-input-area">
+              <label for="article_comment">Comment</label><br>
+              <input type="text" class="article_comment"><br>
+              <button class="add-comment">Send</button>
+            </div>
+          </div>
+        </div>
+    </div>
+{{/each}}

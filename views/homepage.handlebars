@@ -1,6 +1,26 @@
 {{#if loggedIn}}
- 
-{{>posting-card}}
+  <div class="dashboard">
+  <p>Welcome {{username}}! Your user ID: <span class="dashboard-userid">{{userid}}</span></p>
+  <div class="dashboard-btns">
+    <button id="new-post">New Post</button>
+  </div>
+  <form id="new-post-form" class="new-post-form invisible">
+    <label for="post-title-input">Enter Title </label><br>
+    <input type="text" id="post-title-input"><br>
+    <label for="post-body-input">Enter Content </label><br>
+    <textarea id="post-body-input" cols="30" rows="10"></textarea><br>
+    <select id="select-vehicle">
+    </select>
+    <div class="post-form-btns">
+      <button id="submit-post-form">Post</button>
+      <button id="close-post-form">Close</button>
+    </div>
+  </form>
+  <div id="postings-container" class="postings-container">
+    {{> postings}}
+  </div>
+  <script src="/js/dashboard.js"></script>
+</div>
 {{else}}
 
 <article id="welcome">
@@ -24,6 +44,4 @@
     </div>
   {{/each}}
 </section>
-
-
 {{/if}}
