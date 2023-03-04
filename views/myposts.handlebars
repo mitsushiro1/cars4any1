@@ -3,11 +3,18 @@
   <div class="myposts-container">
     <h3>Manage my posts</h3>
     {{#each posts as |post|}}
-    <div>{{post.content}}</div>
+    <div class="manage-list-card">
+      <p>"<span>{{post.content}}</span>" <span class="manage-post-id">POST ID:{{post.id}}</span></p>
+      <button class="delete-my-post">delete</button>
+      <button>update</button>
+    </div>
     {{/each}}
     <h3>Manage my comments</h3>
     {{#each comments as |comment|}}
-    <div>{{comment.comment}}</div>
+    <div class="manage-list-card"><p>"<span>{{comment.comment}}</span>" COMMENT ID:<span class="manage-comment-id">{{comment.id}}</span></p>
+      <button class="delete-my-comment">delete</button>
+      <button>update</button>
+    </div>
     {{/each}}
   </div>
   <script src="/js/myposts.js"></script>
