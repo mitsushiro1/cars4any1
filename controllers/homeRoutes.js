@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const auth = require('./../utils/auth');
 const { User, Vehicle, Posting, Comment} = require('./../models/index');
 
 router.get('/', async (req, res) => {
@@ -65,6 +66,29 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   try {
     res.render('signup');
+  } catch(e) {
+    res.status(500).json(e);
+  }
+});
+
+router.get('/myposts/:id', auth, async (req, res) => {
+  try {
+    const response = await Posting.findAll({ 
+    where: {user_id: req.params.id},
+    });
+    const posts = response.map(data => data.get({plain: true}));
+    const commentResponse = await Comment.findAll({
+      where: {user_id: req.params.id}
+    });
+    const comments = commentResponse.map(com => com.get({plain: true}));
+
+    res.render('myposts', {
+      loggedIn: req.session.loggedIn,
+      username: req.session.username,
+      userid: req.session.userid,
+      posts,
+      comments
+    });
   } catch(e) {
     res.status(500).json(e);
   }

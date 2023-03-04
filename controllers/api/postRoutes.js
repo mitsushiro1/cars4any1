@@ -31,6 +31,20 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/user/:id', async (req, res) => {
+  try {
+    const postingData = await Posting.findAll({
+      where: {user_id: req.params.id}
+    });
+
+    res.status(200).json(postingData);
+
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
+
 router.get('/:id', async (req, res) => {
   try {
     const postingData = await Posting.findByPk(req.params.id, { 

@@ -1,4 +1,5 @@
 const userId = parseInt(document.querySelector('.dashboard-userid').innerText);
+console.log(userId);
 const newPostBtn = document.getElementById('new-post');
 
 const closeBtn = document.querySelector('#close-post-form');
@@ -65,7 +66,8 @@ addCommentBtns.forEach(button => {
       method: 'POST',
       body: JSON.stringify({
         comment,
-        posting_id: parseInt(postId)
+        posting_id: parseInt(postId),
+        user_id: userId
       }),
       headers: {'Content-type': 'application/json'}
     });
@@ -120,7 +122,7 @@ submitBtn.addEventListener('click', async (e) => {
     title: document.querySelector('#post-title-input').value,
     content: document.querySelector('#post-body-input').value,
     vehicle_id: parseInt(document.querySelector('#select-vehicle').value),
-    use_id: userId
+    user_id: userId
   };
 
   const response = await fetch('/api/postings', {

@@ -31,4 +31,16 @@ Comment.belongsTo(Posting, {
   onDelete: 'cascade'
 });
 
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'cascade'
+});
+
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'cascade'
+});
+
+
+
 module.exports = { User, Vehicle, Posting, Comment};

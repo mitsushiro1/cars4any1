@@ -1,6 +1,7 @@
 [
 	{
 		"comment": "Test comment",
-		"posting_id": 1
+		"posting_id": 1,
+		"user_id": 1
 	}
 ]

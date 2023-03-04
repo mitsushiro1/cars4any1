@@ -21,6 +21,10 @@ body {
   background-color: var(--color-dark--2);
 }
 
+a {
+  text-decoration: none;
+}
+
 .web-header {
   width: 100%;
   min-height: 90px;

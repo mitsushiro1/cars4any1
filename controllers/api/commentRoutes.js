@@ -3,7 +3,9 @@ const { User, Vehicle, Posting, Comment} = require('./../../models/index');
 
 router.get('/', async (req,res) => {
   try {
-      const response = await Comment.findAll();
+      const response = await Comment.findAll({
+        include: [{model: User}]
+      });
       res.status(200).json(response);
     } 
     catch(e) {
@@ -14,6 +16,18 @@ router.get('/', async (req,res) => {
 router.get('/:id', async (req, res) => {
   try {
       const response = await Comment.findByPk(req.params.id);
+      res.status(200).json(response);
+  } 
+  catch(e) {
+    res.status(500).json(e);
+  }
+});
+
+router.get('/user/:id', async (req, res) => {
+  try {
+      const response = await Comment.findAll({
+        where: {user_id: req.params.id}
+      });
       res.status(200).json(response);
   } 
   catch(e) {
