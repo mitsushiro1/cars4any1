@@ -372,9 +372,10 @@ a {
 /* above are styles for login form */
 
 #welcome {
+  color: white;
   margin: 45px auto;
   min-height: 300px;
-  width: 680px;
+  width: 856px;
   font-size: 25px;
   padding: 10px;
   border: 1px solid var(--color-brand--1);
@@ -384,6 +385,10 @@ a {
 
 #welcome p {
   padding: 25px 25px 25px 25px;
+}
+
+#welcome a {
+  color: var(--color-brand--1);
 }
 
 /* above are styles for welcome before login */
@@ -396,6 +401,7 @@ a {
 }
 
 .cars_block {
+  color: white;
   margin: 25px 25px 0 25px;
   background-color: var(--color-dark--1);
   border: 1px solid var(--color-brand--1);
@@ -416,5 +422,4 @@ a {
 .cars_block ul li {
   list-style-type: none;
 }
-
 /* above are styles for cars  before login */
