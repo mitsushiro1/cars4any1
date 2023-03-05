@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Vehicle, Posting, Comment} = require('./../../models/index');
-
+const { sendWelcomeEmail } = require('./email');
 
 router.get('/', async (req, res) => {
   try {
