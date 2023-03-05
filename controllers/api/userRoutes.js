@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User, Vehicle, Posting, Comment} = require('./../../models/index');
-
+const { sendWelcomeEmail } = require('./email.js');
 router.get('/', async (req, res) => {
   try {
     const response = await User.findAll();
@@ -61,6 +61,9 @@ router.post('/', async (req, res) => {
     const newUser = Object.assign({}, req.body);
     newUser.password = await bcrypt.hash(req.body.password, 10);
     const response = await User.create(newUser);
+
+    await sendWelcomeEmail(newUser.email);
+
     res.status(200).json(response);
   } catch(e) {
     console.log(e);
